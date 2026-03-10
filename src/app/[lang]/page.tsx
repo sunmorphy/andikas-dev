@@ -44,7 +44,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 src={user.profilePhoto}
                 alt={user.name}
                 fill
-                className="object-cover rounded-[40px] shadow-[8px_8px_0_#171717] border border-neutral-200 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+                className="object-cover rounded-[40px] shadow-[8px_8px_0_#171717] border border-neutral-200 grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-500 ease-in-out"
               />
             ) : (
               <div className="w-full h-full bg-neutral-200 rounded-[40px] shadow-[8px_8px_0_#171717] border border-neutral-200 flex items-center justify-center text-neutral-400">
@@ -181,7 +181,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                       src={project.coverImage}
                       alt={project.title}
                       fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
+                      className="object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500 ease-in-out"
                     />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-neutral-800 text-neutral-400 font-mono text-sm leading-relaxed">

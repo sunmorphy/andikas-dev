@@ -144,7 +144,7 @@ export default function ProjectsClient({
                                 <Link href={`/${lang}/projects/${project.slug}`} className="block relative w-full aspect-[4/3] mb-6">
                                     <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#171717]">
                                         {project.coverImage ? (
-                                            <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" />
+                                            <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500 ease-in-out" />
                                         ) : (
                                             <div className="w-full h-full bg-neutral-800" />
                                         )}
@@ -170,7 +170,7 @@ export default function ProjectsClient({
                                 <div className="flex flex-col md:flex-row w-full bg-neutral-50 border border-neutral-300 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-[12px_12px_0_#171717]">
                                     <div className="relative w-full md:w-2/5 aspect-[4/3] md:aspect-auto md:min-h-[280px] border-b md:border-b-0 md:border-r border-neutral-300 shrink-0">
                                         {project.coverImage ? (
-                                            <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" />
+                                            <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500 ease-in-out" />
                                         ) : (
                                             <div className="w-full h-full bg-neutral-800" />
                                         )}

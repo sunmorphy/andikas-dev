@@ -57,7 +57,7 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: Locale 
             </Button>
 
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white border border-neutral-200 rounded-[24px] shadow-[4px_4px_0_#171717] z-50 overflow-hidden py-2 hidden md:block group-hover:block transition-all transform origin-top-right">
+                <div className="absolute right-0 mt-2 w-48 bg-white border border-neutral-200 rounded-[24px] shadow-[4px_4px_0_#171717] z-50 overflow-hidden py-2">
                     {/* Reverting to a simple absolute list for reliable clicking */}
                     <div className="flex flex-col">
                         {(Object.keys(languageNames) as Locale[]).map((locale) => (
