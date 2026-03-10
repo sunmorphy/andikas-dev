@@ -8,7 +8,9 @@
         "seeAllWorks": "Alle Werke ansehen",
         "letsTalk": "Lass uns reden.",
         "freelance": "Ich bin derzeit offen für ausgewählte freiberufliche Projekte und Kooperationen.",
-        "skills": "Fähigkeiten"
+        "skills": "Fähigkeiten",
+        "showMore": "Mehr anzeigen",
+        "showLess": "Weniger anzeigen"
     },
     "projects": {
         "allWorks": "Alle Werke",

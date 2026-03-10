@@ -8,7 +8,9 @@
         "seeAllWorks": "すべての作品を見る",
         "letsTalk": "話しましょう。",
         "freelance": "現在、選ばれたフリーランスのプロジェクトとコラボレーションを受け付けています。",
-        "skills": "スキル"
+        "skills": "スキル",
+        "showMore": "もっと見る",
+        "showLess": "折りたたむ"
     },
     "projects": {
         "allWorks": "すべての作品",

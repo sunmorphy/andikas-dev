@@ -8,7 +8,9 @@
         "seeAllWorks": "Bekijk Alle Werken",
         "letsTalk": "Laten we praten.",
         "freelance": "Ik sta momenteel open voor geselecteerde freelance projecten en samenwerkingen.",
-        "skills": "Vaardigheden"
+        "skills": "Vaardigheden",
+        "showMore": "Meer tonen",
+        "showLess": "Minder tonen"
     },
     "projects": {
         "allWorks": "Alle Werken",

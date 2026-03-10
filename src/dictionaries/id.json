@@ -8,7 +8,9 @@
         "seeAllWorks": "Lihat Semua Karya",
         "letsTalk": "Mari Berbincang.",
         "freelance": "Saat ini saya terbuka untuk proyek lepas dan kolaborasi selektif.",
-        "skills": "Keahlian"
+        "skills": "Keahlian",
+        "showMore": "Tampilkan lebih",
+        "showLess": "Tampilkan lebih sedikit"
     },
     "projects": {
         "allWorks": "Semua Karya",

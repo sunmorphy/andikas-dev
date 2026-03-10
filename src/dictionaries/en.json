@@ -8,7 +8,9 @@
         "seeAllWorks": "See All Works",
         "letsTalk": "Let's talk.",
         "freelance": "I'm currently open to selective freelance projects and collaborations.",
-        "skills": "Skills"
+        "skills": "Skills",
+        "showMore": "Show more",
+        "showLess": "Show less"
     },
     "projects": {
         "allWorks": "All Works",
