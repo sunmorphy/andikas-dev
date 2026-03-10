@@ -1,0 +1,23 @@
+{
+    "home": {
+        "viewWork": "作品を見る",
+        "journey": "私の道のり",
+        "academic": "学歴",
+        "professional": "職歴",
+        "selectedWorks": "厳選された作品",
+        "seeAllWorks": "すべての作品を見る",
+        "letsTalk": "話しましょう。",
+        "freelance": "現在、選ばれたフリーランスのプロジェクトとコラボレーションを受け付けています。",
+        "skills": "スキル"
+    },
+    "projects": {
+        "allWorks": "すべての作品",
+        "noProjects": "検索条件に一致するプロジェクトはありません。",
+        "project": "プロジェクト",
+        "uiDesign": "UIデザイン",
+        "frontend": "フロントエンド"
+    },
+    "footer": {
+        "rights": "Andikas. 無断転載を禁じます。"
+    }
+}

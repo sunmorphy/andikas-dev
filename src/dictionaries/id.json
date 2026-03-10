@@ -1,0 +1,23 @@
+{
+    "home": {
+        "viewWork": "Lihat Karya Saya",
+        "journey": "Perjalanan Saya",
+        "academic": "Akar Akademis",
+        "professional": "Jalur Profesional",
+        "selectedWorks": "Karya Pilihan",
+        "seeAllWorks": "Lihat Semua Karya",
+        "letsTalk": "Mari Berbincang.",
+        "freelance": "Saat ini saya terbuka untuk proyek lepas dan kolaborasi selektif.",
+        "skills": "Keahlian"
+    },
+    "projects": {
+        "allWorks": "Semua Karya",
+        "noProjects": "Tidak ada proyek yang cocok dengan kriteria pencarian Anda.",
+        "project": "PROYEK",
+        "uiDesign": "DESAIN UI",
+        "frontend": "FRONTEND"
+    },
+    "footer": {
+        "rights": "Andikas. Seluruh hak cipta dilindungi."
+    }
+}

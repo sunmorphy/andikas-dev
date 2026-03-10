@@ -1,0 +1,23 @@
+{
+    "home": {
+        "viewWork": "Bekijk Mijn Werk",
+        "journey": "Mijn Reis",
+        "academic": "Academische Wortels",
+        "professional": "Professionele Weg",
+        "selectedWorks": "Geselecteerde Werken",
+        "seeAllWorks": "Bekijk Alle Werken",
+        "letsTalk": "Laten we praten.",
+        "freelance": "Ik sta momenteel open voor geselecteerde freelance projecten en samenwerkingen.",
+        "skills": "Vaardigheden"
+    },
+    "projects": {
+        "allWorks": "Alle Werken",
+        "noProjects": "Geen projecten komen overeen met uw zoekcriteria.",
+        "project": "PROJECT",
+        "uiDesign": "UI-ONTWERP",
+        "frontend": "FRONTEND"
+    },
+    "footer": {
+        "rights": "Andikas. Alle rechten voorbehouden."
+    }
+}

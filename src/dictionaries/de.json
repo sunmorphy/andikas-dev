@@ -1,0 +1,23 @@
+{
+    "home": {
+        "viewWork": "Meine Arbeit ansehen",
+        "journey": "Mein Weg",
+        "academic": "Akademische Wurzeln",
+        "professional": "Beruflicher Werdegang",
+        "selectedWorks": "Ausgewählte Werke",
+        "seeAllWorks": "Alle Werke ansehen",
+        "letsTalk": "Lass uns reden.",
+        "freelance": "Ich bin derzeit offen für ausgewählte freiberufliche Projekte und Kooperationen.",
+        "skills": "Fähigkeiten"
+    },
+    "projects": {
+        "allWorks": "Alle Werke",
+        "noProjects": "Keine Projekte entsprechen Ihren Suchkriterien.",
+        "project": "PROJEKT",
+        "uiDesign": "UI-DESIGN",
+        "frontend": "FRONTEND"
+    },
+    "footer": {
+        "rights": "Andikas. Alle Rechte vorbehalten."
+    }
+}

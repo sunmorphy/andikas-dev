@@ -1,0 +1,23 @@
+{
+    "home": {
+        "viewWork": "View My Work",
+        "journey": "My Journey",
+        "academic": "Academic Roots",
+        "professional": "Professional Path",
+        "selectedWorks": "Selected Works",
+        "seeAllWorks": "See All Works",
+        "letsTalk": "Let's talk.",
+        "freelance": "I'm currently open to selective freelance projects and collaborations.",
+        "skills": "Skills"
+    },
+    "projects": {
+        "allWorks": "All Works",
+        "noProjects": "No projects match your search criteria.",
+        "project": "PROJECT",
+        "uiDesign": "UI DESIGN",
+        "frontend": "FRONTEND"
+    },
+    "footer": {
+        "rights": "Andikas. All rights reserved."
+    }
+}
