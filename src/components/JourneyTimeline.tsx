@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { GraduationCap, Suitcase, NavArrowDown, NavArrowUp } from "iconoir-react";
 import { Education, Experience } from "@/lib/types";
 import { cn } from "@/lib/utils";
@@ -64,7 +65,21 @@ export default function JourneyTimeline({ educations, experiences, showMoreLabel
                                     {item.data.startYear} — {item.data.endYear || "PRESENT"}
                                 </div>
                                 <h4 className="text-lg font-bold mb-1">{item.data.companyName}</h4>
-                                <p className="text-neutral-500 text-sm whitespace-pre-wrap">{item.data.description}</p>
+                                <p className="text-neutral-500 text-sm whitespace-pre-wrap mb-4">{item.data.description}</p>
+                                {item.data.experienceSkills && item.data.experienceSkills.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                                        {item.data.experienceSkills.map(experienceSkills => (
+                                            <div key={experienceSkills.skill.id} className="flex items-center gap-1.5 bg-neutral-50 border border-neutral-200 rounded-full px-3 py-1.5">
+                                                {experienceSkills.skill.icon && (
+                                                    <div className="relative w-4 h-4 shrink-0">
+                                                        <Image src={experienceSkills.skill.icon} alt={experienceSkills.skill.name} fill className="object-contain" />
+                                                    </div>
+                                                )}
+                                                <span className="text-xs font-medium text-neutral-600">{experienceSkills.skill.name}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         ) : <div className="hidden md:block" />}
                     </div>

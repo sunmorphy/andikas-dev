@@ -34,9 +34,17 @@ export interface Experience {
     companyName: string;
     description: string;
     location: string;
-    skills: Skill[];
+    experienceSkills: ExperienceSkills[];
     createdAt: string;
     updatedAt: string;
+}
+
+export interface ExperienceSkills {
+    id: string;
+    experienceId: string;
+    skillId: number;
+    createdAt: string;
+    skill: Skill;
 }
 
 export interface Education {
