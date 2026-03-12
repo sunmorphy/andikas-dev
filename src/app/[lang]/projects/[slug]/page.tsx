@@ -108,28 +108,6 @@ export default async function ProjectDetailsPage({ params }: Props) {
                     </div>
                 )}
 
-                {/* Content Images (2 column grid) */}
-                {project.contentImages && project.contentImages.length > 0 && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-                        {project.contentImages.slice(0, 2).map((imgUrl, idx) => (
-                            <div key={idx} className="relative w-full aspect-square md:aspect-[4/5] rounded-[40px] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-sm">
-                                <Image src={imgUrl} fill alt={`Content ${idx + 1}`} className="object-cover" />
-                            </div>
-                        ))}
-                    </div>
-                )}
-
-                {/* Additional Images if any */}
-                {project.contentImages && project.contentImages.length > 2 && (
-                    <div className="grid grid-cols-1 gap-8 mb-20">
-                        {project.contentImages.slice(2).map((imgUrl, idx) => (
-                            <div key={idx + 2} className="relative w-full aspect-[21/9] rounded-[40px] overflow-hidden bg-neutral-100 border border-neutral-200 shadow-sm">
-                                <Image src={imgUrl} fill alt={`Content ${idx + 3}`} className="object-cover" />
-                            </div>
-                        ))}
-                    </div>
-                )}
-
                 {/* Content Section: The Outcome */}
                 {project.outcome && (
                     <div className="flex flex-col md:flex-row gap-12 mb-32">
@@ -149,6 +127,17 @@ export default async function ProjectDetailsPage({ params }: Props) {
                 {project.content && !project.challenge && !project.myRole && !project.outcome && (
                     <div className="w-full prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none mb-32">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.content}</ReactMarkdown>
+                    </div>
+                )}
+
+                {/* Content Images */}
+                {project.contentImages && project.contentImages.length > 0 && (
+                    <div className="flex flex-col gap-8 mb-32">
+                        {project.contentImages.map((img, idx) => (
+                            <div key={idx} className="w-full aspect-[16/9] bg-neutral-100 rounded-[40px] overflow-hidden relative shadow-[6px_6px_0_rgba(0,0,0,0.05)] border border-neutral-200">
+                                <Image src={img} fill alt={`${project.title} — image ${idx + 1}`} className="object-cover" />
+                            </div>
+                        ))}
                     </div>
                 )}
 
