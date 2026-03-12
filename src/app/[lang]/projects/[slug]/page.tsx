@@ -50,7 +50,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                 </p>
 
                 {/* Cover Image */}
-                <div className="w-full aspect-[21/9] bg-neutral-100 rounded-[40px] overflow-hidden relative mb-16 shadow-[8px_8px_0_rgba(0,0,0,0.05)] border border-neutral-200">
+                <div className="w-full aspect-[4/3] bg-neutral-100 rounded-[40px] overflow-hidden relative mb-16 shadow-[8px_8px_0_rgba(0,0,0,0.05)] border border-neutral-200">
                     {project.coverImage ? (
                         <Image src={project.coverImage} fill alt={project.title} className="object-cover" priority />
                     ) : (
