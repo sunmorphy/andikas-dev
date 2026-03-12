@@ -38,7 +38,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
         <article className="container mx-auto px-6 pt-12 pb-32 flex flex-col items-center">
             <div className="w-full max-w-5xl">
                 <Link href={`/${lang}/projects`} className="inline-flex items-center gap-2 text-sm font-bold text-neutral-500 hover:text-neutral-900 transition-colors mb-12 uppercase tracking-widest">
-                    <ArrowLeft className="w-4 h-4" /> Back to projects
+                    <ArrowLeft className="w-4 h-4" /> {dict.projects.backToProjects}
                 </Link>
 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl leading-tight">
@@ -54,26 +54,26 @@ export default async function ProjectDetailsPage({ params }: Props) {
                     {project.coverImage ? (
                         <Image src={project.coverImage} fill alt={project.title} className="object-cover" priority />
                     ) : (
-                        <div className="w-full h-full flex items-center justify-center text-neutral-300">No cover image available.</div>
+                        <div className="w-full h-full flex items-center justify-center text-neutral-300">{dict.projects.noCoverImage}</div>
                     )}
                 </div>
 
                 {/* Metadata section */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-neutral-200 mb-20">
                     <div className="flex flex-col gap-2">
-                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Client</span>
+                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">{dict.projects.client}</span>
                         <span className="font-medium">{project.client || "N/A"}</span>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Tags</span>
+                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">{dict.projects.tags}</span>
                         <span className="font-medium">{project.projectTags?.map(t => t.tag.name).join(", ") || "N/A"}</span>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Year</span>
+                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">{dict.projects.year}</span>
                         <span className="font-medium">{project.year || "N/A"}</span>
                     </div>
                     <div className="flex flex-col gap-2">
-                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Industry</span>
+                        <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">{dict.projects.industry}</span>
                         <span className="font-medium">{project.industry || "N/A"}</span>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                             <div className="w-12 h-12 bg-neutral-900 text-white rounded-full flex items-center justify-center mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                             </div>
-                            <h2 className="text-xl font-bold tracking-tight uppercase">The Challenge</h2>
+                            <h2 className="text-xl font-bold tracking-tight uppercase">{dict.projects.theChallenge}</h2>
                         </div>
                         <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.challenge}</ReactMarkdown>
@@ -100,7 +100,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                             <div className="w-12 h-12 bg-neutral-100 border border-neutral-200 text-neutral-900 rounded-full flex items-center justify-center mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
                             </div>
-                            <h2 className="text-xl font-bold tracking-tight uppercase">My Role</h2>
+                            <h2 className="text-xl font-bold tracking-tight uppercase">{dict.projects.myRole}</h2>
                         </div>
                         <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.myRole}</ReactMarkdown>
@@ -115,7 +115,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                             <div className="w-12 h-12 bg-neutral-900 text-white rounded-full flex items-center justify-center mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15l8.3-8.3-1.4-1.4L12 12.2l-3.3-3.3-1.4 1.4z" /><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" /></svg>
                             </div>
-                            <h2 className="text-xl font-bold tracking-tight uppercase">The Outcome</h2>
+                            <h2 className="text-xl font-bold tracking-tight uppercase">{dict.projects.theOutcome}</h2>
                         </div>
                         <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.outcome}</ReactMarkdown>
@@ -143,13 +143,13 @@ export default async function ProjectDetailsPage({ params }: Props) {
 
                 {/* Footer CTA */}
                 <div className="flex flex-col items-center justify-center py-20 border-t border-neutral-200">
-                    <h2 className="text-3xl md:text-4xl font-light mb-8">Interested in working together?</h2>
+                    <h2 className="text-3xl md:text-4xl font-light mb-8">{dict.projects.interestedTitle}</h2>
                     <Button asChild size="lg" className="mb-16">
-                        <Link href={`/${lang}#contact`}>Let's Talk</Link>
+                        <Link href={`/${lang}#contact`}>{dict.projects.letsTalk}</Link>
                     </Button>
 
                     <Link href={`/${lang}/projects`} className="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 hover:text-neutral-900 transition-colors uppercase tracking-widest">
-                        <ArrowLeft className="w-4 h-4" /> Back to projects
+                        <ArrowLeft className="w-4 h-4" /> {dict.projects.backToProjects}
                     </Link>
                 </div>
 

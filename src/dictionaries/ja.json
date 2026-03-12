@@ -17,7 +17,18 @@
         "noProjects": "検索条件に一致するプロジェクトはありません。",
         "project": "プロジェクト",
         "uiDesign": "UIデザイン",
-        "frontend": "フロントエンド"
+        "frontend": "フロントエンド",
+        "backToProjects": "プロジェクト一覧へ",
+        "client": "クライアント",
+        "tags": "タグ",
+        "year": "年",
+        "industry": "業界",
+        "noCoverImage": "カバー画像はありません。",
+        "theChallenge": "課題",
+        "myRole": "私の役割",
+        "theOutcome": "成果",
+        "interestedTitle": "一緒に仕事をしませんか？",
+        "letsTalk": "話しましょう"
     },
     "footer": {
         "rights": "Andikas. 無断転載を禁じます。"

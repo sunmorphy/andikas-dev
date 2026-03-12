@@ -17,7 +17,18 @@
         "noProjects": "Keine Projekte entsprechen Ihren Suchkriterien.",
         "project": "PROJEKT",
         "uiDesign": "UI-DESIGN",
-        "frontend": "FRONTEND"
+        "frontend": "FRONTEND",
+        "backToProjects": "Zurück zu Projekten",
+        "client": "Kunde",
+        "tags": "Tags",
+        "year": "Jahr",
+        "industry": "Branche",
+        "noCoverImage": "Kein Titelbild verfügbar.",
+        "theChallenge": "Die Herausforderung",
+        "myRole": "Meine Rolle",
+        "theOutcome": "Das Ergebnis",
+        "interestedTitle": "Interesse an einer Zusammenarbeit?",
+        "letsTalk": "Lass uns reden"
     },
     "footer": {
         "rights": "Andikas. Alle Rechte vorbehalten."

@@ -17,7 +17,18 @@
         "noProjects": "Geen projecten komen overeen met uw zoekcriteria.",
         "project": "PROJECT",
         "uiDesign": "UI-ONTWERP",
-        "frontend": "FRONTEND"
+        "frontend": "FRONTEND",
+        "backToProjects": "Terug naar projecten",
+        "client": "Klant",
+        "tags": "Tags",
+        "year": "Jaar",
+        "industry": "Industrie",
+        "noCoverImage": "Geen omslagafbeelding beschikbaar.",
+        "theChallenge": "De Uitdaging",
+        "myRole": "Mijn Rol",
+        "theOutcome": "Het Resultaat",
+        "interestedTitle": "Interesse in samenwerken?",
+        "letsTalk": "Laten we praten"
     },
     "footer": {
         "rights": "Andikas. Alle rechten voorbehouden."

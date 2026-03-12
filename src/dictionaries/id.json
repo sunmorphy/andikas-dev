@@ -17,7 +17,18 @@
         "noProjects": "Tidak ada proyek yang cocok dengan kriteria pencarian Anda.",
         "project": "PROYEK",
         "uiDesign": "DESAIN UI",
-        "frontend": "FRONTEND"
+        "frontend": "FRONTEND",
+        "backToProjects": "Kembali ke proyek",
+        "client": "Klien",
+        "tags": "Tag",
+        "year": "Tahun",
+        "industry": "Industri",
+        "noCoverImage": "Gambar sampul tidak tersedia.",
+        "theChallenge": "Tantangan",
+        "myRole": "Peran Saya",
+        "theOutcome": "Hasil",
+        "interestedTitle": "Tertarik untuk bekerja sama?",
+        "letsTalk": "Ayo Bicara"
     },
     "footer": {
         "rights": "Andikas. Seluruh hak cipta dilindungi."

@@ -17,7 +17,18 @@
         "noProjects": "No projects match your search criteria.",
         "project": "PROJECT",
         "uiDesign": "UI DESIGN",
-        "frontend": "FRONTEND"
+        "frontend": "FRONTEND",
+        "backToProjects": "Back to projects",
+        "client": "Client",
+        "tags": "Tags",
+        "year": "Year",
+        "industry": "Industry",
+        "noCoverImage": "No cover image available.",
+        "theChallenge": "The Challenge",
+        "myRole": "My Role",
+        "theOutcome": "The Outcome",
+        "interestedTitle": "Interested in working together?",
+        "letsTalk": "Let's Talk"
     },
     "footer": {
         "rights": "Andikas. All rights reserved."
