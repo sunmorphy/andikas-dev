@@ -19,12 +19,12 @@ export default async function Header({ lang }: { lang: Locale }) {
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
                     <ScrollLink href={`/${lang}#journey`} targetId="journey" className="text-neutral-900 hover:text-neutral-500 transition-colors">{dict.home.journey}</ScrollLink>
                     <ScrollLink href={`/${lang}#selected-works`} targetId="selected-works" className="text-neutral-900 hover:text-neutral-500 transition-colors">{dict.home.selectedWorks}</ScrollLink>
-                    <ScrollLink href={`/${lang}#contact`} targetId="contact" className="text-neutral-900 hover:text-neutral-500 transition-colors">Contact</ScrollLink>
+                    <ScrollLink href={`/${lang}#contact`} targetId="contact" className="text-neutral-900 hover:text-neutral-500 transition-colors">{dict.home.contact}</ScrollLink>
                 </nav>
 
                 <div className="flex items-center gap-3">
                     <Button asChild>
-                        <ScrollLink href={`/${lang}#contact`} targetId="contact">Hire Me</ScrollLink>
+                        <ScrollLink href={`/${lang}#contact`} targetId="contact">{dict.home.hireMe}</ScrollLink>
                     </Button>
                     <LanguageSwitcher currentLang={lang} />
                 </div>

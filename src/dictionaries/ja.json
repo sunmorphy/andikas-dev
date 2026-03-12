@@ -10,7 +10,9 @@
         "freelance": "現在、選ばれたフリーランスのプロジェクトとコラボレーションを受け付けています。",
         "skills": "スキル",
         "showMore": "もっと見る",
-        "showLess": "折りたたむ"
+        "showLess": "折りたたむ",
+        "contact": "お問い合わせ",
+        "hireMe": "採用する"
     },
     "projects": {
         "allWorks": "すべての作品",

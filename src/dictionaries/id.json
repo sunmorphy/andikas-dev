@@ -10,7 +10,9 @@
         "freelance": "Saat ini saya terbuka untuk proyek lepas dan kolaborasi selektif.",
         "skills": "Keahlian",
         "showMore": "Tampilkan lebih",
-        "showLess": "Tampilkan lebih sedikit"
+        "showLess": "Tampilkan lebih sedikit",
+        "contact": "Kontak",
+        "hireMe": "Rekrut Saya"
     },
     "projects": {
         "allWorks": "Semua Karya",
@@ -28,7 +30,7 @@
         "myRole": "Peran Saya",
         "theOutcome": "Hasil",
         "interestedTitle": "Tertarik untuk bekerja sama?",
-        "letsTalk": "Ayo Bicara"
+        "letsTalk": "Mari Berbincang"
     },
     "footer": {
         "rights": "Andikas. Seluruh hak cipta dilindungi."
