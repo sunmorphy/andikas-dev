@@ -127,7 +127,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mb-20">
           {highlightedProjects.map((project) => (
             <div key={project.id} className="flex flex-col group">
-              <Link href={`/projects/${project.slug}`} className="block relative w-full aspect-[4/3] mb-6">
+              <Link href={`/${lang}/projects/${project.slug}`} className="block relative w-full aspect-[4/3] mb-6">
                 <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#171717]">
                   {project.coverImage ? (
                     <Image
@@ -148,7 +148,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 </div>
               </Link>
 
-              <Link href={`/projects/${project.slug}`}>
+              <Link href={`/${lang}/projects/${project.slug}`}>
                 <h3 className="text-2xl font-bold mb-3 tracking-tight group-hover:text-neutral-600 transition-colors">{project.title}</h3>
               </Link>
               <p className="text-neutral-500 mb-6 leading-relaxed line-clamp-2">
