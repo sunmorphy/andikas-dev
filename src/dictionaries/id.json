@@ -34,5 +34,10 @@
     },
     "footer": {
         "rights": "Andikas. Seluruh hak cipta dilindungi."
+    },
+    "notFound": {
+        "heading": "Halaman tidak ditemukan.",
+        "description": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+        "goHome": "Kembali ke beranda"
     }
 }

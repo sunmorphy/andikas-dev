@@ -34,5 +34,10 @@
     },
     "footer": {
         "rights": "Andikas. Alle rechten voorbehouden."
+    },
+    "notFound": {
+        "heading": "Pagina niet gevonden.",
+        "description": "De pagina die u zoekt bestaat niet of is verplaatst.",
+        "goHome": "Terug naar home"
     }
 }

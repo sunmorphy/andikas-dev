@@ -34,5 +34,10 @@
     },
     "footer": {
         "rights": "Andikas. All rights reserved."
+    },
+    "notFound": {
+        "heading": "Page not found.",
+        "description": "The page you're looking for doesn't exist or has been moved.",
+        "goHome": "Go back home"
     }
 }

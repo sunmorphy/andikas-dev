@@ -34,5 +34,10 @@
     },
     "footer": {
         "rights": "Andikas. 無断転載を禁じます。"
+    },
+    "notFound": {
+        "heading": "ページが見つかりません。",
+        "description": "お探しのページは存在しないか、移動された可能性があります。",
+        "goHome": "ホームに戻る"
     }
 }
