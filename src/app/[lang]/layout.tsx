@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Locale } from "@/i18n-config";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,6 +37,7 @@ export default async function RootLayout({
         <Header lang={lang} />
         <main className="min-h-[calc(100vh-160px)]">{children}</main>
         <Footer lang={lang} />
+        <Analytics />
       </body>
     </html>
   );
