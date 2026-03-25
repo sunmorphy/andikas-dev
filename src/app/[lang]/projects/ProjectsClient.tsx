@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Search, ViewGrid, List as ListIcon, NavArrowLeft, NavArrowRight } from "iconoir-react";
+import { Search, ViewGrid, List as ListIcon, NavArrowLeft, NavArrowRight, Code } from "iconoir-react";
 import { Project, Tag, PaginatedMeta } from "@/lib/types";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -34,6 +34,14 @@ export default function ProjectsClient({
     const pathname = usePathname();
     const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
     const [searchQuery, setSearchQuery] = useState(initialSearch);
+    const [isPending, startTransition] = React.useTransition();
+
+    const handleNavigate = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        startTransition(() => {
+            router.push(href);
+        });
+    };
 
     const updateUrl = (params: { search?: string; tag?: number | null; page?: number }) => {
         const url = new URLSearchParams();
@@ -141,7 +149,7 @@ export default function ProjectsClient({
                         viewMode === "grid" ? (
                             // GRID VIEW
                             <div key={project.id} className="flex flex-col group">
-                                <Link href={`/${lang}/projects/${project.slug}`} className="block relative w-full aspect-[4/3] mb-6">
+                                <Link onClick={(e) => handleNavigate(e, `/${lang}/projects/${project.slug}`)} href={`/${lang}/projects/${project.slug}`} prefetch={false} className="block relative w-full aspect-[4/3] mb-6">
                                     <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#171717]">
                                         {project.coverImage ? (
                                             <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500 ease-in-out" />
@@ -166,7 +174,7 @@ export default function ProjectsClient({
                             </div>
                         ) : (
                             // LIST VIEW
-                            <Link key={project.id} href={`/${lang}/projects/${project.slug}`} className="block group">
+                            <Link onClick={(e) => handleNavigate(e, `/${lang}/projects/${project.slug}`)} key={project.id} href={`/${lang}/projects/${project.slug}`} prefetch={false} className="block group">
                                 <div className="flex flex-col md:flex-row w-full bg-neutral-50 border border-neutral-300 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-[12px_12px_0_#171717]">
                                     <div className="relative w-full md:w-2/5 aspect-[4/3] md:aspect-auto md:min-h-[280px] border-b md:border-b-0 md:border-r border-neutral-300 shrink-0">
                                         {project.coverImage ? (
@@ -238,6 +246,18 @@ export default function ProjectsClient({
                 )}
 
             </div>
+
+            {/* Custom Overlay for Transition */}
+            {isPending && (
+                <div className="fixed inset-0 z-[100] bg-neutral-50 flex items-center justify-center">
+                    <div className="relative group">
+                        <div className="absolute inset-0 bg-neutral-200 rounded-3xl [clip-path:polygon(0_0,100%_15%,100%_100%,15%_100%)] group-hover:bg-neutral-300 transition-colors animate-pulse" />
+                        <div className="relative bg-white border-2 border-neutral-900 rounded-2xl p-6 shadow-[8px_8px_0_#171717] animate-[spin_3s_linear_infinite]">
+                            <Code className="w-12 h-12 text-neutral-900" />
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
