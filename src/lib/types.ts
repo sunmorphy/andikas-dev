@@ -11,6 +11,7 @@ export interface User {
     email?: string;
     phone?: string;
     location?: string;
+    resume?: string;
 }
 
 export interface Skill {

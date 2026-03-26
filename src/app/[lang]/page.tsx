@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, StarSolid, ArrowUpRight, Bridge3d, Flash, CodeBrackets } from "iconoir-react";
+import { ArrowDown, StarSolid, ArrowUpRight, Bridge3d, Flash, CodeBrackets, Download } from "iconoir-react";
 import { fetchUser, fetchExperience, fetchEducation, fetchProjects, fetchSkills } from "@/lib/api";
 import { Button } from "@/components/ui/Button";
 import { ScrollLink } from "@/components/ScrollLink";
@@ -195,10 +195,19 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </div>
 
           <div className="flex flex-col items-start md:items-end gap-10">
-            <a href={`mailto:${user?.email || "hello@andikas.dev"}`} className="group flex items-center justify-between gap-6 bg-neutral-900 text-white rounded-full px-8 py-5 hover:bg-neutral-800 transition-colors shadow-[8px_8px_0_rgba(0,0,0,0.1)]">
-              <span className="text-xl md:text-2xl font-bold">{user?.email || "hello@andikas.dev"}</span>
-              <ArrowUpRight className="w-6 h-6 group-hover:rotate-45 transition-transform" />
-            </a>
+            <div className="flex flex-col items-start md:items-end gap-4">
+              <a href={`mailto:${user?.email || "hello@andikas.dev"}`} className="group flex items-center justify-between gap-6 bg-neutral-900 text-white rounded-full px-8 py-5 hover:bg-neutral-800 transition-colors shadow-[8px_8px_0_rgba(0,0,0,0.1)]">
+                <span className="text-xl md:text-2xl font-bold">{user?.email || "hello@andikas.dev"}</span>
+                <ArrowUpRight className="w-6 h-6 group-hover:rotate-45 transition-transform" />
+              </a>
+
+              {user?.resume && (
+                <a href={user.resume} target="_blank" rel="noreferrer" className="group flex items-center justify-between gap-4 bg-white border-2 border-neutral-900 text-neutral-900 rounded-full px-8 py-5 hover:bg-neutral-100 transition-colors shadow-[8px_8px_0_rgba(0,0,0,0.1)]">
+                  <span className="text-xl md:text-2xl font-bold">{dict.home.downloadResume}</span>
+                  <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+                </a>
+              )}
+            </div>
 
             <div className="flex items-center gap-8 text-sm font-bold tracking-widest text-neutral-600">
               {user?.socialMedias?.map((social, idx) => {
