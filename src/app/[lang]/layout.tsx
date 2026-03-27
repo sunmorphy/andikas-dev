@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Locale } from "@/i18n-config";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import HashScroller from "@/components/HashScroller";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -40,6 +41,7 @@ export default async function RootLayout({
         <Footer lang={lang} />
         <Analytics />
         <SpeedInsights />
+        <HashScroller />
       </body>
     </html>
   );

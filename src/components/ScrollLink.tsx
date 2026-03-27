@@ -14,8 +14,11 @@ export const ScrollLink = ({ children, className, targetId, ...props }: ScrollLi
     const pathname = usePathname();
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        // Only intercept if we are already on the home page where the anchors live
-        if (pathname === "/") {
+        // Only intercept if we are already on the localized home page where the anchors live
+        // e.g. /en, /id, /de, /ja, /nl
+        const isHomePage = pathname === `/${pathname.split("/")[1]}`;
+
+        if (isHomePage) {
             e.preventDefault();
             const target = document.getElementById(targetId);
             if (!target) return;
@@ -46,7 +49,7 @@ export const ScrollLink = ({ children, className, targetId, ...props }: ScrollLi
                     requestAnimationFrame(animation);
                 } else {
                     document.documentElement.style.scrollBehavior = originalScrollBehavior;
-                    window.history.pushState(null, "", `/#${targetId}`);
+                    window.history.pushState(null, "", `${pathname}#${targetId}`);
                 }
             };
 
