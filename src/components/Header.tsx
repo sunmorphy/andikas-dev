@@ -26,7 +26,7 @@ export default async function Header({ lang }: { lang: Locale }) {
                     <Button asChild>
                         <ScrollLink href={`/${lang}#contact`} targetId="contact">{dict.home.hireMe}</ScrollLink>
                     </Button>
-                    <LanguageSwitcher currentLang={lang} />
+                    {/* <LanguageSwitcher currentLang={lang} /> */}
                 </div>
             </div>
         </header>
