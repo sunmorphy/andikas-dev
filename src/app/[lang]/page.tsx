@@ -11,15 +11,17 @@ import JourneyTimeline from "@/components/JourneyTimeline";
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const resolvedParams = await params;
   const lang = resolvedParams.lang as Locale;
-  const dict = await getDictionary(lang);
 
-  const user = await fetchUser(undefined, lang);
-  const experiences = await fetchExperience(undefined, lang);
-  const educations = await fetchEducation(undefined, lang);
-  const skills = await fetchSkills(undefined);
+  // Run all independent fetches in parallel — key performance fix
+  const [dict, user, experiences, educations, skills, projectsRes] = await Promise.all([
+    getDictionary(lang),
+    fetchUser(undefined, lang),
+    fetchExperience(undefined, lang),
+    fetchEducation(undefined, lang),
+    fetchSkills(undefined),
+    fetchProjects(undefined, { highlighted: true, limit: 4 }, lang),
+  ]);
 
-  // Fetch only highlighted projects with a limit of 4
-  const projectsRes = await fetchProjects(undefined, { highlighted: true, limit: 4 }, lang);
   const highlightedProjects = projectsRes.data;
 
   return (
