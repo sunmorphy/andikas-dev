@@ -159,7 +159,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
               <div className="flex flex-wrap gap-2">
                 {project.projectTags?.map((projectTag) => (
-                  <span key={projectTag.id} className="text-xs font-bold text-neutral-600 border border-neutral-200 rounded-full px-4 py-1.5 bg-white shadow-sm uppercase tracking-wider">
+                  <span key={projectTag.id} className="text-xs font-bold text-neutral-500 border border-neutral-200 rounded-full px-4 py-1.5 bg-neutral-50 shadow-sm uppercase tracking-wider">
                     {projectTag.tag.name}
                   </span>
                 ))}
