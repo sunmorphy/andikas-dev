@@ -82,12 +82,12 @@ export default async function ProjectDetailsPage({ params }: Props) {
                 {project.challenge && (
                     <div className="flex flex-col md:flex-row gap-12 mb-20">
                         <div className="w-full md:w-1/4 shrink-0">
-                            <div className="w-12 h-12 bg-neutral-900 text-white rounded-full flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 bg-neutral-900 text-neutral-50 rounded-full flex items-center justify-center mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
                             </div>
                             <h2 className="text-xl font-bold tracking-tight uppercase">{dict.projects.theChallenge}</h2>
                         </div>
-                        <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none">
+                        <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed dark:prose-invert max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.challenge}</ReactMarkdown>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                             </div>
                             <h2 className="text-xl font-bold tracking-tight uppercase">{dict.projects.myRole}</h2>
                         </div>
-                        <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none">
+                        <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed dark:prose-invert max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.myRole}</ReactMarkdown>
                         </div>
                     </div>
@@ -112,12 +112,12 @@ export default async function ProjectDetailsPage({ params }: Props) {
                 {project.outcome && (
                     <div className="flex flex-col md:flex-row gap-12 mb-32">
                         <div className="w-full md:w-1/4 shrink-0">
-                            <div className="w-12 h-12 bg-neutral-900 text-white rounded-full flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 bg-neutral-900 text-neutral-50 rounded-full flex items-center justify-center mb-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15l8.3-8.3-1.4-1.4L12 12.2l-3.3-3.3-1.4 1.4z" /><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" /></svg>
                             </div>
                             <h2 className="text-xl font-bold tracking-tight uppercase">{dict.projects.theOutcome}</h2>
                         </div>
-                        <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none">
+                        <div className="w-full md:w-3/4 prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed dark:prose-invert max-w-none">
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.outcome}</ReactMarkdown>
                         </div>
                     </div>
@@ -125,7 +125,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
 
                 {/* Full markdown content block if challenge/role/outcome was not provided but generic content is available */}
                 {project.content && !project.challenge && !project.myRole && !project.outcome && (
-                    <div className="w-full prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed max-w-none mb-32">
+                    <div className="w-full prose prose-neutral prose-lg prose-p:font-light prose-p:leading-relaxed dark:prose-invert max-w-none mb-32">
                         <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.content}</ReactMarkdown>
                     </div>
                 )}

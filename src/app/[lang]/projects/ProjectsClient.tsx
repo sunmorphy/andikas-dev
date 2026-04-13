@@ -87,21 +87,21 @@ export default function ProjectsClient({
                                 placeholder="Search projects..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full h-12 pl-12 pr-4 rounded-full border border-neutral-200 bg-white focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-shadow"
+                                className="w-full h-12 pl-12 pr-4 rounded-full border border-neutral-200 bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-neutral-900 transition-shadow"
                             />
                         </div>
 
                         <div className="hidden md:flex items-center gap-2 bg-neutral-100 p-1 rounded-full">
                             <button
                                 onClick={() => setViewMode("grid")}
-                                className={cn("p-2 rounded-full transition-colors", viewMode === "grid" ? "bg-neutral-900 text-white shadow-sm" : "text-neutral-500 hover:text-neutral-900")}
+                                className={cn("p-2 rounded-full transition-colors", viewMode === "grid" ? "bg-neutral-900 text-neutral-50 shadow-sm" : "text-neutral-500 hover:text-neutral-900")}
                                 aria-label="Grid view"
                             >
                                 <ViewGrid className="w-5 h-5" />
                             </button>
                             <button
                                 onClick={() => setViewMode("list")}
-                                className={cn("p-2 rounded-full transition-colors", viewMode === "list" ? "bg-neutral-900 text-white shadow-sm" : "text-neutral-500 hover:text-neutral-900")}
+                                className={cn("p-2 rounded-full transition-colors", viewMode === "list" ? "bg-neutral-900 text-neutral-50 shadow-sm" : "text-neutral-500 hover:text-neutral-900")}
                                 aria-label="List view"
                             >
                                 <ListIcon className="w-5 h-5" />
@@ -115,7 +115,7 @@ export default function ProjectsClient({
                             className={cn(
                                 "px-5 py-2.5 rounded-full text-sm font-medium transition-colors",
                                 !initialTagId
-                                    ? "bg-neutral-900 text-white"
+                                    ? "bg-neutral-900 text-neutral-50"
                                     : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
                             )}
                         >
@@ -128,7 +128,7 @@ export default function ProjectsClient({
                                 className={cn(
                                     "px-5 py-2.5 rounded-full text-sm font-medium transition-colors",
                                     initialTagId === t.id
-                                        ? "bg-neutral-900 text-white"
+                                        ? "bg-neutral-900 text-neutral-50"
                                         : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
                                 )}
                             >
@@ -150,7 +150,7 @@ export default function ProjectsClient({
                             // GRID VIEW
                             <div key={project.id} className="flex flex-col group">
                                 <Link onClick={(e) => handleNavigate(e, `/${lang}/projects/${project.slug}`)} href={`/${lang}/projects/${project.slug}`} prefetch={false} className="block relative w-full aspect-[4/3] mb-6">
-                                    <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#171717]">
+                                    <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-neo-lg rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-neo-xl">
                                         {project.coverImage ? (
                                             <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500 ease-in-out" />
                                         ) : (
@@ -166,7 +166,7 @@ export default function ProjectsClient({
 
                                 <div className="flex flex-wrap gap-2">
                                     {project.projectTags?.map((projectTags) => (
-                                        <span key={projectTags.id} className="text-xs font-bold text-neutral-600 border border-neutral-200 rounded-full px-4 py-1.5 bg-white shadow-sm uppercase tracking-wider">
+                                        <span key={projectTags.id} className="text-xs font-bold text-neutral-600 border border-neutral-200 rounded-full px-4 py-1.5 bg-neutral-50 shadow-sm uppercase tracking-wider">
                                             {projectTags.tag.name}
                                         </span>
                                     ))}
@@ -175,7 +175,7 @@ export default function ProjectsClient({
                         ) : (
                             // LIST VIEW
                             <Link onClick={(e) => handleNavigate(e, `/${lang}/projects/${project.slug}`)} key={project.id} href={`/${lang}/projects/${project.slug}`} prefetch={false} className="block group">
-                                <div className="flex flex-col md:flex-row w-full bg-neutral-50 border border-neutral-300 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-[12px_12px_0_#171717]">
+                                <div className="flex flex-col md:flex-row w-full bg-surface dark:bg-card-dark border border-neutral-300 dark:border-neutral-700 shadow-neo-lg rounded-[40px] overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-neo-xl">
                                     <div className="relative w-full md:w-2/5 aspect-[4/3] md:aspect-auto md:min-h-[280px] border-b md:border-b-0 md:border-r border-neutral-300 shrink-0">
                                         {project.coverImage ? (
                                             <Image src={project.coverImage} alt={project.title} fill className="object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-500 ease-in-out" />
@@ -188,7 +188,7 @@ export default function ProjectsClient({
                                         <p className="text-neutral-500 mb-8 leading-relaxed max-w-xl">{project.description}</p>
                                         <div className="flex flex-wrap gap-2 mt-auto">
                                             {project.projectTags?.map((projectTags) => (
-                                                <span key={projectTags.id} className="text-xs font-bold text-neutral-500 border border-neutral-200 rounded-full px-4 py-1.5 bg-white uppercase tracking-wider">
+                                                <span key={projectTags.id} className="text-xs font-bold text-neutral-500 border border-neutral-200 rounded-full px-4 py-1.5 bg-neutral-50 uppercase tracking-wider">
                                                     {projectTags.tag.name}
                                                 </span>
                                             ))}
@@ -224,7 +224,7 @@ export default function ProjectsClient({
                                 <Button
                                     key={pageNum}
                                     variant={isActive ? undefined : "ghost"}
-                                    className={cn("rounded-full w-10 h-10 p-0", isActive ? "text-white bg-neutral-900 border-none hover:bg-neutral-800" : "text-neutral-600 hover:bg-neutral-200")}
+                                    className={cn("rounded-full w-10 h-10 p-0", isActive ? "text-neutral-50 bg-neutral-900 border-none hover:bg-neutral-800" : "text-neutral-600 hover:bg-neutral-200")}
                                     onClick={() => updateUrl({ page: pageNum })}
                                 >
                                     {pageNum}
@@ -252,7 +252,7 @@ export default function ProjectsClient({
                 <div className="fixed inset-0 z-[100] bg-neutral-50 flex items-center justify-center">
                     <div className="relative group">
                         <div className="absolute inset-0 bg-neutral-200 rounded-3xl [clip-path:polygon(0_0,100%_15%,100%_100%,15%_100%)] group-hover:bg-neutral-300 transition-colors animate-pulse" />
-                        <div className="relative bg-white border-2 border-neutral-900 rounded-2xl p-6 shadow-[8px_8px_0_#171717] animate-[spin_3s_linear_infinite]">
+                        <div className="relative bg-card dark:bg-card-dark border-2 border-neutral-900 dark:border-neutral-100 rounded-2xl p-6 shadow-neo-lg animate-[spin_3s_linear_infinite]">
                             <Code className="w-12 h-12 text-neutral-900" />
                         </div>
                     </div>

@@ -8,7 +8,7 @@ export default function Loading() {
                 <div className="absolute inset-0 bg-neutral-200 rounded-3xl [clip-path:polygon(0_0,100%_15%,100%_100%,15%_100%)] group-hover:bg-neutral-300 transition-colors animate-pulse" />
 
                 {/* Main spinning container */}
-                <div className="relative bg-white border-2 border-neutral-900 rounded-2xl p-6 shadow-[8px_8px_0_#171717] animate-[spin_3s_linear_infinite]">
+                <div className="relative bg-card dark:bg-card-dark border-2 border-neutral-900 dark:border-neutral-100 rounded-2xl p-6 shadow-neo-lg animate-[spin_3s_linear_infinite]">
                     <Code className="w-12 h-12 text-neutral-900" />
                 </div>
             </div>

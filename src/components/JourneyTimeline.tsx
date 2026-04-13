@@ -40,7 +40,7 @@ export default function JourneyTimeline({ educations, experiences, showMoreLabel
                     {/* Left column — Education */}
                     <div className="flex flex-col md:items-end">
                         {item.kind === "edu" ? (
-                            <div className="w-full max-w-md md:ml-auto bg-white rounded-[32px] p-8 border border-neutral-200 shadow-[6px_6px_0_#171717] text-center md:text-right">
+                            <div className="w-full md:max-w-md md:ml-auto bg-card dark:bg-card-dark rounded-[32px] p-8 border border-neutral-200 dark:border-neutral-700 shadow-neo text-center md:text-right">
                                 <div className="text-xs font-bold text-neutral-400 mb-2 uppercase tracking-widest">{item.data.year}</div>
                                 <h4 className="text-lg font-bold mb-1">{item.data.institutionName}</h4>
                                 <div className="text-sm font-medium text-neutral-900 mb-3">{item.data.degree}</div>
@@ -60,7 +60,7 @@ export default function JourneyTimeline({ educations, experiences, showMoreLabel
                     {/* Right column — Experience */}
                     <div className="flex flex-col md:items-start">
                         {item.kind === "exp" ? (
-                            <div className="w-full max-w-md md:mr-auto bg-white rounded-[32px] p-8 border border-neutral-200 shadow-[6px_6px_0_#171717] text-center md:text-left">
+                            <div className="w-full md:max-w-md md:mr-auto bg-card dark:bg-card-dark rounded-[32px] p-8 border border-neutral-200 dark:border-neutral-700 shadow-neo text-center md:text-left">
                                 <div className="text-xs font-bold text-neutral-400 mb-2 uppercase tracking-widest">
                                     {item.data.startYear} — {item.data.endYear || "PRESENT"}
                                 </div>

@@ -47,10 +47,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                 src={user.profilePhoto}
                 alt={user.name}
                 fill
-                className="object-cover rounded-[40px] shadow-[8px_8px_0_#171717] border border-neutral-200 grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-500 ease-in-out"
+                className="object-cover rounded-[40px] shadow-neo-lg border border-neutral-200 grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-500 ease-in-out"
               />
             ) : (
-              <div className="w-full h-full bg-neutral-200 rounded-[40px] shadow-[8px_8px_0_#171717] border border-neutral-200 flex items-center justify-center text-neutral-400">
+              <div className="w-full h-full bg-neutral-200 rounded-[40px] shadow-neo-lg border border-neutral-200 flex items-center justify-center text-neutral-400">
                 <span>Photo</span>
               </div>
             )}
@@ -80,7 +80,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
         <div className="w-full max-w-5xl flex flex-wrap justify-center gap-4 md:gap-6">
           {skills.map((skill) => (
-            <div key={skill.id} className="flex items-center gap-3 bg-white border border-neutral-200 rounded-[32px] px-6 py-4 shadow-[4px_4px_0_#171717] hover:-translate-y-1 hover:shadow-[6px_6px_0_#171717] transition-all">
+            <div key={skill.id} className="flex items-center gap-3 bg-card dark:bg-card-dark border border-neutral-200 dark:border-neutral-700 rounded-[32px] px-6 py-4 shadow-neo-sm hover:-translate-y-1 hover:shadow-neo transition-all">
               {skill.icon && (
                 <div className="relative w-6 h-6 shrink-0">
                   <Image src={skill.icon} alt={skill.name} fill className="object-contain" />
@@ -130,7 +130,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           {highlightedProjects.map((project) => (
             <div key={project.id} className="flex flex-col group">
               <Link href={`/${lang}/projects/${project.slug}`} className="block relative w-full aspect-[4/3] mb-6">
-                <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-[8px_8px_0_#171717] rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-[12px_12px_0_#171717]">
+                <div className="w-full h-full bg-neutral-200 border border-neutral-200 shadow-neo-lg rounded-[40px] overflow-hidden relative transition-transform duration-300 group-hover:-translate-y-2 group-hover:shadow-neo-xl">
                   {project.coverImage ? (
                     <Image
                       src={project.coverImage}
@@ -198,13 +198,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
           <div className="flex flex-col items-start md:items-end gap-10">
             <div className="flex flex-col items-start md:items-end gap-4">
-              <a href={`mailto:${user?.email || "hello@andikas.dev"}`} className="group flex items-center justify-between gap-6 bg-neutral-900 text-white rounded-full px-8 py-5 hover:bg-neutral-800 transition-colors shadow-[8px_8px_0_rgba(0,0,0,0.1)]">
+              <a href={`mailto:${user?.email || "hello@andikas.dev"}`} className="group flex items-center justify-between gap-6 bg-neutral-900 text-neutral-50 rounded-full px-8 py-5 hover:bg-neutral-800 transition-colors fixed-shadow-neo-lg">
                 <span className="text-xl md:text-2xl font-bold">{user?.email || "hello@andikas.dev"}</span>
                 <ArrowUpRight className="w-6 h-6 group-hover:rotate-45 transition-transform" />
               </a>
 
               {user?.resume && (
-                <a href={user.resume} target="_blank" rel="noreferrer" className="group flex items-center justify-between gap-4 bg-white border-2 border-neutral-900 text-neutral-900 rounded-full px-8 py-5 hover:bg-neutral-100 transition-colors shadow-[8px_8px_0_rgba(0,0,0,0.1)]">
+                <a href={user.resume} target="_blank" rel="noreferrer" className="group flex items-center justify-between gap-4 bg-neutral-50 border-2 border-neutral-900 text-neutral-900 rounded-full px-8 py-5 hover:bg-neutral-100 transition-colors fixed-shadow-neo-lg">
                   <span className="text-xl md:text-2xl font-bold">{dict.home.downloadResume}</span>
                   <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
                 </a>
