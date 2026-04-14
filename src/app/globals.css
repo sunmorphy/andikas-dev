@@ -83,22 +83,6 @@
     box-shadow: 12px 12px 0 var(--color-shadow);
   }
 
-  .fixed-shadow-neo-sm {
-    box-shadow: 4px 4px 0 var(--color-shadow-dark);
-  }
-
-  .fixed-shadow-neo {
-    box-shadow: 6px 6px 0 var(--color-shadow-dark);
-  }
-
-  .fixed-shadow-neo-lg {
-    box-shadow: 8px 8px 0 var(--color-shadow-dark);
-  }
-
-  .fixed-shadow-neo-xl {
-    box-shadow: 12px 12px 0 var(--color-shadow-dark);
-  }
-
   .dark .shadow-neo-sm {
     box-shadow: 4px 4px 0 var(--color-shadow-dark);
   }
@@ -145,5 +129,101 @@
 
   .dark .hover\:shadow-neo-xl:hover {
     box-shadow: 12px 12px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-shadow-neo-sm {
+    box-shadow: 4px 4px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-shadow-neo {
+    box-shadow: 6px 6px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-shadow-neo-lg {
+    box-shadow: 8px 8px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-shadow-neo-xl {
+    box-shadow: 12px 12px 0 var(--color-shadow-dark);
+  }
+
+  .text-shadow-neo-sm {
+    text-shadow: 4px 4px 0 var(--color-shadow);
+  }
+
+  .text-shadow-neo {
+    text-shadow: 6px 6px 0 var(--color-shadow);
+  }
+
+  .text-shadow-neo-lg {
+    text-shadow: 8px 8px 0 var(--color-shadow);
+  }
+
+  .text-shadow-neo-xl {
+    text-shadow: 12px 12px 0 var(--color-shadow);
+  }
+
+  .dark .text-shadow-neo-sm {
+    text-shadow: 4px 4px 0 var(--color-shadow-dark);
+  }
+
+  .dark .text-shadow-neo {
+    text-shadow: 6px 6px 0 var(--color-shadow-dark);
+  }
+
+  .dark .text-shadow-neo-lg {
+    text-shadow: 8px 8px 0 var(--color-shadow-dark);
+  }
+
+  .dark .text-shadow-neo-xl {
+    text-shadow: 12px 12px 0 var(--color-shadow-dark);
+  }
+
+  .hover\:text-shadow-neo-sm:hover {
+    text-shadow: 4px 4px 0 var(--color-shadow);
+  }
+
+  .hover\:text-shadow-neo:hover {
+    text-shadow: 6px 6px 0 var(--color-shadow);
+  }
+
+  .hover\:text-shadow-neo-lg:hover {
+    text-shadow: 8px 8px 0 var(--color-shadow);
+  }
+
+  .hover\:text-shadow-neo-xl:hover {
+    text-shadow: 12px 12px 0 var(--color-shadow);
+  }
+
+  .dark .hover\:text-shadow-neo-sm:hover {
+    text-shadow: 4px 4px 0 var(--color-shadow-dark);
+  }
+
+  .dark .hover\:text-shadow-neo:hover {
+    text-shadow: 6px 6px 0 var(--color-shadow-dark);
+  }
+
+  .dark .hover\:text-shadow-neo-lg:hover {
+    text-shadow: 8px 8px 0 var(--color-shadow-dark);
+  }
+
+  .dark .hover\:text-shadow-neo-xl:hover {
+    text-shadow: 12px 12px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-text-shadow-neo-sm {
+    text-shadow: 4px 4px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-text-shadow-neo {
+    text-shadow: 6px 6px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-text-shadow-neo-lg {
+    text-shadow: 8px 8px 0 var(--color-shadow-dark);
+  }
+
+  .fixed-text-shadow-neo-xl {
+    text-shadow: 12px 12px 0 var(--color-shadow-dark);
   }
 }

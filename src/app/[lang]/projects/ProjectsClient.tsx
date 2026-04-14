@@ -74,7 +74,7 @@ export default function ProjectsClient({
             <div className="w-full max-w-5xl">
                 <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">All Projects</h1>
                 <p className="text-xl text-neutral-500 max-w-2xl mb-12 leading-relaxed">
-                    A curated collection of design and development work, focusing on minimalism and functional beauty.
+                    A curated collection of design and development work.
                 </p>
 
                 {/* Toolbar */}

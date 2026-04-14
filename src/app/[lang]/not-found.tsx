@@ -30,7 +30,7 @@ export default function NotFound() {
                 <span className="text-[160px] md:text-[220px] font-bold tracking-tighter leading-none text-neutral-100">
                     404
                 </span>
-                <span className="absolute inset-0 flex items-center justify-center text-[160px] md:text-[220px] font-bold tracking-tighter leading-none text-neutral-900 [text-shadow:6px_6px_0_rgba(0,0,0,0.08)]">
+                <span className="absolute inset-0 flex items-center justify-center text-[160px] md:text-[220px] font-bold tracking-tighter leading-none text-neutral-900 fixed-text-shadow-neo">
                     404
                 </span>
             </div>
@@ -44,9 +44,9 @@ export default function NotFound() {
 
             <Link
                 href={`/${lang}`}
-                className="inline-flex items-center gap-2 bg-neutral-900 text-white font-bold rounded-full px-8 py-4 shadow-[6px_6px_0_rgba(0,0,0,0.15)] hover:bg-neutral-800 hover:-translate-y-0.5 hover:shadow-[8px_8px_0_rgba(0,0,0,0.15)] transition-all"
+                className="group inline-flex items-center gap-2 bg-neutral-900 text-neutral-100 font-bold rounded-full px-8 py-4 fixed-shadow-neo hover:bg-neutral-800 hover:-translate-y-0.5 transition-all"
             >
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4 group-hover:rotate-45 transition-transform" />
                 {dict.goHome}
             </Link>
         </section>

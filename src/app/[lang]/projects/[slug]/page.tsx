@@ -50,7 +50,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                 </p>
 
                 {/* Cover Image */}
-                <div className="w-full aspect-[4/3] bg-neutral-100 rounded-[40px] overflow-hidden relative mb-16 shadow-[8px_8px_0_rgba(0,0,0,0.05)] border border-neutral-200">
+                <div className="w-full aspect-[4/3] bg-neutral-100 rounded-[40px] overflow-hidden relative mb-16 fixed-shadow-neo border border-neutral-200">
                     {project.coverImage ? (
                         <Image src={project.coverImage} fill alt={project.title} className="object-cover" priority />
                     ) : (
@@ -134,7 +134,7 @@ export default async function ProjectDetailsPage({ params }: Props) {
                 {project.contentImages && project.contentImages.length > 0 && (
                     <div className="flex flex-col gap-8 mb-32">
                         {project.contentImages.map((img, idx) => (
-                            <div key={idx} className="w-full aspect-[16/9] bg-neutral-100 rounded-[40px] overflow-hidden relative shadow-[6px_6px_0_rgba(0,0,0,0.05)] border border-neutral-200">
+                            <div key={idx} className="w-full aspect-[16/9] bg-neutral-100 rounded-[40px] overflow-hidden relative fixed-shadow-neo border border-neutral-200">
                                 <Image src={img} fill alt={`${project.title} — image ${idx + 1}`} className="object-cover" />
                             </div>
                         ))}

@@ -29,7 +29,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
                         const phosphorClass = `ph-${iconName.replace(/[A-Z]/g, m => "-" + m.toLowerCase()).replace(/^-/, "")}`;
 
                         return (
-                            <a key={idx} href={url} target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors uppercase group">
+                            <a key={idx} href={url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-neutral-600 hover:text-neutral-900 transition-colors uppercase group">
                                 <i className={`ph ${phosphorClass} text-lg group-hover:scale-110 transition-transform`}></i>
                                 <span className="sr-only">{username}</span>
                             </a>

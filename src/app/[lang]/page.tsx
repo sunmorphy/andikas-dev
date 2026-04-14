@@ -58,7 +58,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
 
         <p className="text-xl md:text-2xl text-neutral-600 font-light text-center max-w-3xl mb-12">
-          {user?.description || "Independent product designer and full-stack engineer building digital experiences with a focus on minimalism, speed, and functional aesthetics."}
+          {user?.description}
         </p>
 
         <Button asChild size="lg" className="gap-2">
