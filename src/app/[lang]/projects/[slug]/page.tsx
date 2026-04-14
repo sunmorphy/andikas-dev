@@ -45,9 +45,9 @@ export default async function ProjectDetailsPage({ params }: Props) {
                     {project.title}
                 </h1>
 
-                <p className="text-xl md:text-2xl text-neutral-500 font-light max-w-3xl mb-16 leading-relaxed">
-                    {project.description}
-                </p>
+                <div className="w-full prose prose-neutral prose-xl md:prose-2xl prose-p:font-light prose-p:leading-relaxed dark:prose-invert text-neutral-500 max-w-none mb-16">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.description}</ReactMarkdown>
+                </div>
 
                 {/* Cover Image */}
                 <div className="w-full aspect-[4/3] bg-neutral-100 rounded-[40px] overflow-hidden relative mb-16 fixed-shadow-neo border border-neutral-200">
