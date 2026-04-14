@@ -35,7 +35,7 @@ export default async function RootLayout({
         suppressHydrationWarning
         className={cn(
           inter.variable,
-          "min-h-screen bg-surface dark:bg-surface-dark text-ink dark:text-ink-dark font-sans selection:bg-neutral-900 selection:text-white dark:selection:bg-neutral-100 dark:selection:text-neutral-900"
+          "min-h-screen bg-surface dark:bg-surface-dark text-ink dark:text-ink-dark font-sans selection:bg-neutral-900 selection:text-neutral-50"
         )}
       >
         <ThemeProvider>
